@@ -1,14 +1,14 @@
 package com;
 
 public class Employee {
-	
+
 	private int empId;
 	private String name;
 	private double salary;
 	private String address;
-	
-	
-	
+
+
+
 	public Employee(int empId, String name, double salary, String address) {
 		this.empId = empId;
 		this.name = name;
@@ -17,7 +17,7 @@ public class Employee {
 	}
 
 	public Employee() {
-		
+
 	}
 
 	public int getEmpId() {
@@ -72,35 +72,16 @@ public class Employee {
 
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Employee other = (Employee) obj;
-		if (address == null) {
-			if (other.address != null)
-				return false;
-		} else if (!address.equals(other.address))
-			return false;
-		if (empId != other.empId)
-			return false;
-		if (name == null) {
-			if (other.name != null)
-				return false;
-		} else if (!name.equals(other.name))
-			return false;
-		if (Double.doubleToLongBits(salary) != Double.doubleToLongBits(other.salary))
-			return false;
-		return true;
+		Employee e=(Employee) obj;
+		return this.empId==e.empId && this.name.equals(e.name) &&
+				this.salary==e.salary;
 	}
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
 
 }
