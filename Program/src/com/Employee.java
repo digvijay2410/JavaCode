@@ -5,13 +5,17 @@ public class Employee {
 	private int empId;
 	private String name;
 	private double salary;
+	private String address;
 	
-	public Employee(int empId, String name, double salary) {
+	
+	
+	public Employee(int empId, String name, double salary, String address) {
 		this.empId = empId;
 		this.name = name;
 		this.salary = salary;
+		this.address = address;
 	}
-	
+
 	public Employee() {
 		
 	}
@@ -39,6 +43,15 @@ public class Employee {
 	public void setSalary(double salary) {
 		this.salary = salary;
 	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	
 	
 	
 	
